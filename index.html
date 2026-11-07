@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FORGE ATHLETICS — Premium Performance Fitness & Strength Training Club</title>
+<meta name="description" content="Forge Athletics: premium strength training, muscle building, weight loss and personal training. Book a free session.">
+<meta property="og:title" content="FORGE ATHLETICS — Build Your Strongest Self.">
+<meta property="og:description" content="Premium performance fitness and strength training club.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap">
+<script src="./js/gsap.min.js"></script>
+<script>window.gsap || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"><\/script>');</script>
+<script src="./js/ScrollTrigger.min.js"></script>
+<script>window.ScrollTrigger || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"><\/script>');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthClub","name":"Forge Athletics","slogan":"Build your strongest self.","description":"Premium performance fitness and strength training club."}</script>
+<style>
+:root{--bg:#0B0B0C;--gr:#171719;--lime:#FF4D1F;--wh:#F2EDE4;--st:#8A857C;--ch:#2E2C2B;--d:'Anton','Oswald',Impact,sans-serif;--b:'Inter',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:72px;overflow-x:hidden;width:100%}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+body{background:var(--bg);color:var(--wh);font:400 16px/1.6 var(--b);overflow-x:hidden;width:100%;max-width:100vw;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.d{font-family:var(--d);text-transform:uppercase;line-height:.92;letter-spacing:.01em;font-weight:400}
+.meta{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--st);font-weight:500}
+.lime{color:var(--lime)}
+section{position:relative;padding:clamp(64px,10vw,160px) clamp(18px,5vw,72px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;font:700 12px var(--b);letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--wh);background:none;color:var(--wh);cursor:pointer;transition:.3s;min-height:48px;touch-action:manipulation}
+.btn.p{background:var(--lime);border-color:var(--lime);color:var(--bg)}
+.btn:hover{background:var(--wh);color:var(--bg);border-color:var(--wh)}.btn.p:hover{background:var(--wh)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .35s ease-out,transform .35s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.rv.in{opacity:1;transform:none}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.fit-img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* loader */
+#ld{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-content:center;text-align:center;transition:opacity .8s,visibility .8s}
+#ld.x{opacity:0;visibility:hidden;pointer-events:none}
+#ld h1{font-size:clamp(56px,16vw,200px);animation:lg 1.4s cubic-bezier(.2,.7,.2,1) both}
+#ld p{letter-spacing:.3em;font-size:11px;color:var(--st);animation:lg 1.4s .3s both;padding:0 20px}
+@keyframes lg{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:calc(20px + env(safe-area-inset-top,0px)) clamp(18px,5vw,72px) 20px;transition:.4s;border-bottom:1px solid transparent}
+nav.s{padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:12px;background:rgba(11,11,12,.94);backdrop-filter:blur(16px);border-color:var(--ch)}
+.logo{font:400 clamp(24px,5vw,28px) var(--d);letter-spacing:.06em}.logo i{color:var(--lime);font-style:normal}
+.links{display:flex;gap:30px}
+.links a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;position:relative;padding:6px 0}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:right;transition:transform .4s}
+.links a:hover::after{transform:scaleX(1);transform-origin:left}
+#bg{display:none;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22);color:var(--wh);padding:0 16px;height:42px;font:700 11px/42px var(--b);letter-spacing:.14em;cursor:pointer;transition:.3s}
+#bg:hover,#bg:active{background:var(--lime);border-color:var(--lime);color:var(--bg)}
+#mm{position:fixed;inset:0;z-index:49;background:rgba(11,11,12,.98);backdrop-filter:blur(20px);display:flex;flex-direction:column;justify-content:flex-start;gap:8px;padding:calc(88px + env(safe-area-inset-top,0px)) 24px calc(36px + env(safe-area-inset-bottom,0px));transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
+#mm.o{transform:none}
+#mm a{font:400 clamp(32px,8vw,56px)/1.2 var(--d);text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.06);padding:10px 0;transition:color .3s,transform .3s}
+#mm a:hover,#mm a:active{color:var(--lime);transform:translateX(8px)}
+
+/* hero */
+#hero{min-height:100svh;padding:0;display:flex;align-items:flex-end;overflow:hidden;background:#0a0a0b;position:relative}
+#hero .bgs{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:center right;filter:brightness(.68) contrast(1.18);will-change:transform}
+#hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,11,12,.94) 0%,rgba(11,11,12,.7) 45%,rgba(11,11,12,.28) 78%),linear-gradient(0deg,var(--bg) 0%,transparent 45%);pointer-events:none}
+.hc{position:relative;z-index:2;padding:0 clamp(18px,5vw,72px) clamp(50px,8vw,100px);max-width:1200px;width:100%}
+.hc h2{font-size:clamp(40px,12.5vw,210px);margin:16px 0 24px;overflow-wrap:break-word}
+.hc h2 span{display:block;overflow:hidden}.hc h2 span b{display:block;font-weight:400;transform:translateY(105%);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.go .hc h2 span b{transform:none}.go .hc h2 span:nth-child(2) b{transition-delay:.12s}.go .hc h2 span:nth-child(3) b{transition-delay:.24s}
+.hc p{max-width:480px;color:#cfc9bf;margin-bottom:30px;font-size:clamp(15px,2.5vw,17px)}
+.hc .row{display:flex;gap:14px;flex-wrap:wrap}
+.vm{position:absolute;z-index:2;right:clamp(14px,3vw,40px);top:50%;writing-mode:vertical-rl;transform:rotate(180deg) translateY(50%)}
+.sc{position:absolute;z-index:2;right:clamp(20px,5vw,72px);bottom:44px;width:1px;height:70px;background:var(--ch);overflow:hidden}
+.sc::after{content:"";position:absolute;left:0;width:1px;height:30px;background:var(--lime);animation:sl 1.8s infinite}
+@keyframes sl{from{top:-30px}to{top:70px}}
+
+/* statement marquee */
+.mq{overflow:hidden;border-block:1px solid var(--ch);padding:16px 0;white-space:nowrap;background:var(--gr)}
+.mq div{display:inline-block;animation:mq 30s linear infinite;font:400 clamp(22px,4vw,28px) var(--d);letter-spacing:.08em;color:var(--st)}
+.mq span{color:var(--lime);margin:0 24px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* band */
+.band{height:clamp(360px,65vh,90vh);padding:0;overflow:hidden;position:relative}
+.band .ph-img{position:absolute;inset:0;overflow:hidden}
+.band .fit-img{width:100%;height:100%;object-fit:cover;filter:brightness(.58) contrast(1.18);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.band:hover .fit-img{transform:scale(1.03)}
+.band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,11,12,.75) 0%,rgba(11,11,12,.2) 40%,var(--bg) 95%);pointer-events:none}
+.band h2{position:absolute;z-index:3;left:clamp(18px,5vw,72px);bottom:clamp(24px,5vw,48px);font-size:clamp(44px,12vw,200px)}
+
+/* about */
+#about{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(32px,5vw,60px);align-items:end;background:radial-gradient(60% 50% at 88% 0,rgba(255,77,31,.07),transparent 70%)}
+#about h2{font-size:clamp(44px,9vw,170px)}#about h2 em{font-style:normal;color:transparent;-webkit-text-stroke:1px var(--wh)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
+.stats b{display:block;font:400 clamp(44px,8vw,60px) var(--d);color:var(--lime)}
+
+/* programs */
+#programs{background:linear-gradient(180deg,var(--gr),var(--bg))}
+.ph{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:clamp(32px,5vw,60px);flex-wrap:wrap}
+.ph h2{font-size:clamp(40px,8vw,140px)}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.pi{border-top:1px solid var(--ch);padding:22px 0;cursor:pointer;position:relative}
+.pi button{all:unset;display:flex;width:100%;align-items:baseline;gap:20px;cursor:pointer}
+.pi .n{font:400 14px var(--b);color:var(--lime);letter-spacing:.2em}
+.pi h3{font:400 clamp(28px,4.5vw,64px)/1 var(--d);text-transform:uppercase;transition:.4s}
+.pi:hover h3,.pi.o h3{color:var(--lime);transform:translateX(12px)}
+.pi .bd{max-height:0;overflow:hidden;transition:max-height .6s;padding-left:46px;color:#b5afa5}
+.pi.o .bd{max-height:220px}.bd p{margin:12px 0}.bd .meta{display:block;margin-bottom:10px}
+.bd a{color:var(--lime);font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid}
+
+/* programs vertical grid */
+.program-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:20px}
+.prog-card{position:relative;border:1px solid var(--ch);background:#0e0e0f;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:460px;padding:36px 30px;transition:border-color .4s,transform .4s cubic-bezier(.2,.7,.2,1)}
+.prog-card:hover{border-color:var(--lime);transform:translateY(-6px)}
+.prog-card .ph-img{position:absolute;inset:0;overflow:hidden;z-index:0}
+.prog-card .ph-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.54) contrast(1.18);transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .5s ease}
+.prog-card:hover .ph-img img{transform:scale(1.06);filter:brightness(.68) contrast(1.2)}
+.prog-card .ph-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.15) 0%,rgba(11,11,12,.55) 45%,rgba(11,11,12,.96) 90%);pointer-events:none}
+.prog-card .no{position:absolute;z-index:2;top:20px;left:24px;font:400 clamp(72px,8vw,110px)/1 var(--d);color:transparent;-webkit-text-stroke:1px rgba(255,77,31,.6);pointer-events:none}
+.prog-card .tx{position:relative;z-index:3}
+.prog-card .tx .meta{color:var(--lime);display:block;margin-bottom:6px;font-weight:600;letter-spacing:.2em}
+.prog-card h3{font:400 clamp(32px,4.5vw,54px)/.96 var(--d);text-transform:uppercase;margin:6px 0 10px}
+.prog-card p{color:#cfc9bf;font-size:15px;line-height:1.5;max-width:440px;margin-bottom:20px}
+.prog-card .btn{margin-top:4px}
+
+/* storytelling / transformation */
+.tr{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,60px);align-items:center}
+.tr h2{font-size:clamp(40px,7.5vw,130px)}
+.tr .ph-img{aspect-ratio:4/5;position:relative;overflow:hidden;border:1px solid var(--ch)}
+.tr .ph-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.82) contrast(1.12);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.tr:hover .ph-img img{transform:scale(1.04)}
+.tr .ph-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,12,.9) 0%,rgba(11,11,12,.2) 50%,transparent 100%);pointer-events:none}
+.tr-badge{position:absolute;bottom:20px;left:20px;right:20px;z-index:3;background:rgba(11,11,12,.88);backdrop-filter:blur(12px);border:1px solid var(--ch);padding:14px 18px}
+.tr-badge b{display:block;font-size:14px;color:var(--wh);margin-top:4px}
+.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;padding-top:22px;border-top:1px solid var(--ch)}
+.story-stats b{display:block;font:400 clamp(30px,4vw,38px) var(--d);color:var(--lime)}
+.story-stats span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--st)}
+
+/* facilities / environment */
+#fac{background:var(--gr)}
+.ft{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}
+.ft button,.fl button{font:500 12px var(--b);letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;background:none;color:var(--st);border:1px solid var(--ch);cursor:pointer;min-height:44px;transition:.3s}
+.ft button[aria-pressed=true],.fl button[aria-pressed=true]{background:var(--lime);color:var(--bg);border-color:var(--lime)}
+.fv{position:relative;height:min(60vh,540px);overflow:hidden;clip-path:inset(0);transition:clip-path .7s cubic-bezier(.7,0,.2,1);border:1px solid var(--ch);background:#0e0e0f}
+.fv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.58) contrast(1.12);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.fv:hover img{transform:scale(1.03)}
+.fv::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,12,.95) 0%,rgba(11,11,12,.4) 40%,transparent 80%);pointer-events:none}
+.fv-info{position:absolute;left:24px;right:24px;bottom:28px;z-index:3}
+.fv h3{font:400 clamp(36px,6vw,110px)/1 var(--d);text-transform:uppercase;margin:6px 0 10px}
+.fv p{max-width:560px;color:#cfc9bf;font-size:15px;line-height:1.5}
+
+/* trainers / coaches */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.tg article:nth-child(2){margin-top:36px}
+.trainer-card{transition:transform .4s}
+.trainer-card .ph-img{aspect-ratio:3/4;margin-bottom:18px;position:relative;overflow:hidden;border:1px solid var(--ch);background:#0e0e0f}
+.trainer-card .ph-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) contrast(1.1);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s}
+.trainer-card:hover .ph-img img{transform:scale(1.05);filter:brightness(.95) contrast(1.12)}
+.trainer-card .ph-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,12,.8) 0%,transparent 45%);pointer-events:none}
+.tg h3{font:400 clamp(28px,3.5vw,36px) var(--d);text-transform:uppercase;margin-top:4px}
+.tg .role{color:var(--lime);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin:6px 0 8px}
+.tg .bio{color:var(--st);font-size:14px;line-height:1.5;margin-bottom:18px}
+.tg .quote{display:block;margin-top:6px;color:#cfc9bf;font-style:italic}
+
+/* membership */
+#mem{background:var(--wh);color:var(--bg)}
+#mem .meta{color:#6b655c}
+.tog{display:inline-flex;border:1px solid var(--bg);margin:24px 0 44px}
+.tog button{font:700 12px var(--b);letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border:0;background:none;cursor:pointer;color:var(--bg);min-height:48px}
+.tog button[aria-pressed=true]{background:var(--bg);color:var(--lime)}
+.pr{border-top:2px solid var(--bg)}
+.pr>div{display:grid;grid-template-columns:70px 1.2fr 2fr 1fr auto;gap:24px;align-items:center;padding:30px 0;border-bottom:1px solid rgba(11,11,12,.2)}
+.pr h3{font:400 clamp(36px,5vw,84px)/1 var(--d)}
+.pr ul{list-style:none;padding:0}.pr li::before{content:"+ ";font-weight:700}
+.pr .pc{font:400 34px var(--d)}.pr .pc small{display:block;font:500 11px var(--b);letter-spacing:.12em}
+#mem .btn{border-color:var(--bg);color:var(--bg)}#mem .btn:hover{background:var(--bg);color:var(--lime)}
+
+/* philosophy */
+#phi{overflow:hidden;background:radial-gradient(60% 50% at 88% 0,rgba(255,77,31,.07),transparent 70%)}
+#phi h2{font-size:clamp(44px,9vw,190px)}
+.hs{display:flex;gap:2px;margin-top:50px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;-webkit-overflow-scrolling:touch}
+.hs article{flex:0 0 min(360px,80vw);scroll-snap-align:start;background:var(--gr);padding:30px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;border-top:2px solid var(--ch);transition:.4s}
+.hs article:hover{border-color:var(--lime);transform:translateY(-8px)}
+.hs b{font:400 64px var(--d);color:var(--ch)}.hs h3{font:400 36px var(--d);text-transform:uppercase}
+
+/* schedule */
+#sch{background:var(--gr)}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.demo{display:inline-block;background:var(--lime);color:var(--bg);font:700 10px var(--b);letter-spacing:.2em;padding:5px 10px;margin-bottom:12px}
+.sr{display:grid;grid-template-columns:1.4fr 1fr .8fr .8fr .8fr auto;gap:16px;align-items:center;padding:18px 0;border-top:1px solid var(--ch)}
+.sr h3{font:400 26px var(--d);text-transform:uppercase}.sr span{color:#b5afa5;font-size:14px}
+
+/* testimonials */
+#tes{text-align:center}#tes h2{font-size:clamp(44px,8vw,140px)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px;text-align:left}
+.testi-card{background:var(--gr);border:1px solid var(--ch);padding:32px;display:flex;flex-direction:column;justify-content:space-between;transition:.4s;position:relative}
+.testi-card:hover{border-color:var(--lime);transform:translateY(-6px)}
+.testi-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.testi-avatar{width:54px;height:54px;border-radius:50%;overflow:hidden;border:2px solid var(--lime);flex-shrink:0;background:#000}
+.testi-avatar img{width:100%;height:100%;object-fit:cover}
+.testi-meta h4{font:400 22px var(--d);text-transform:uppercase;margin:0;letter-spacing:.02em}
+.testi-meta p{font-size:12px;color:var(--st);margin:2px 0 0}
+.testi-body{color:#cfc9bf;font-size:15px;line-height:1.6;font-style:italic;margin-bottom:20px}
+.testi-tag{display:inline-block;padding:6px 12px;background:rgba(255,77,31,.12);border:1px solid rgba(255,77,31,.3);color:var(--lime);font:700 11px var(--b);letter-spacing:.14em;text-transform:uppercase}
+
+/* trial form */
+#trial{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,60px);background:var(--gr)}
+#trial h2{font-size:clamp(40px,7vw,128px)}
+form{display:grid;gap:20px}
+label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--st)}
+input,select{width:100%;background:none;border:0;border-bottom:1px solid var(--st);color:var(--wh);font:500 17px var(--b);padding:12px 0;min-height:48px;border-radius:0}
+select option{background:var(--bg)}
+input:focus,select:focus{outline:none;border-color:var(--lime)}
+.er{color:#ff7a59;font-size:12px;min-height:16px;display:block;margin-top:4px;text-transform:none;letter-spacing:0}
+#ok{display:none;border:1px solid var(--lime);padding:18px;color:var(--lime);line-height:1.5}
+
+/* contact */
+#loc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,60px)}
+#loc h2{font-size:clamp(40px,6.5vw,110px);margin-bottom:24px}
+#loc dl{display:grid;gap:16px}#loc dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--st)}#loc dd{margin:0;font-size:17px}
+.mp{aspect-ratio:1;display:grid;place-content:center;text-align:center;padding:26px;gap:18px;border:1px solid var(--ch);background:radial-gradient(circle at center,rgba(255,77,31,.12),transparent 70%),#0e0e0f}
+
+/* final cta */
+#fin{min-height:90svh;display:grid;place-content:center;text-align:center;overflow:hidden;position:relative;background:#0a0a0b}
+.fin-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.fin-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.24) contrast(1.22);transform:scale(1.05)}
+.fin-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 100%,rgba(255,77,31,.26),transparent 75%),linear-gradient(180deg,var(--bg) 0%,transparent 35%,transparent 65%,var(--bg) 100%)}
+.fin-content{position:relative;z-index:2;padding:0 20px}
+#fin h2{font-size:clamp(52px,12vw,240px);margin-bottom:20px}#fin p{color:#b5afa5;margin-bottom:30px;font-size:17px}
+
+/* footer */
+footer{padding:clamp(48px,8vw,80px) clamp(18px,5vw,72px) 36px;border-top:1px solid var(--ch)}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px}
+footer h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--st);margin-bottom:12px;font-weight:500}
+footer li{list-style:none;margin:8px 0}footer ul{padding:0}footer a:hover{color:var(--lime)}
+.fb{font:400 clamp(36px,9vw,150px)/1 var(--d);color:var(--ch);margin-top:50px;text-transform:uppercase}
+
+/* ========================================================= */
+/* RESPONSIVE MEDIA QUERIES (TABLETS & DESKTOP COLLAPSE)     */
+/* ========================================================= */
+
+@media(max-width:900px){
+  .links,nav>.btn{display:none}
+  #bg{display:flex;align-items:center;justify-content:center}
+  .vm{display:none}
+  .pr>div{grid-template-columns:1fr;gap:14px;padding:26px 0}
+  .testi-grid{grid-template-columns:1fr;gap:20px;margin-top:34px}
+}
+
+@media(max-width:800px){
+  section{padding:clamp(54px,9vw,90px) clamp(16px,4vw,32px)}
+  #about{grid-template-columns:1fr;gap:32px}
+  .pl{grid-template-columns:1fr}
+  .tr{grid-template-columns:1fr;gap:32px}
+  .tg{grid-template-columns:1fr;gap:34px;margin-top:36px}
+  .tg article:nth-child(2){margin-top:0}
+  .trainer-card .btn{width:100%;justify-content:center}
+  #trial{grid-template-columns:1fr;gap:32px}
+  #loc{grid-template-columns:1fr;gap:32px}
+  .fg{grid-template-columns:1fr 1fr;gap:30px}
+  .band{height:clamp(320px,50vh,480px)}
+  .band h2{font-size:clamp(40px,11vw,110px);left:clamp(16px,4vw,32px);bottom:24px}
+  .program-grid{grid-template-columns:1fr;gap:20px;margin-top:20px}
+  .prog-card{min-height:380px;padding:26px 20px}
+  .prog-card .no{font-size:clamp(56px,14vw,84px);top:14px;left:18px}
+  .prog-card h3{font-size:clamp(28px,6vw,42px)}
+  .prog-card p{font-size:14px;margin-bottom:16px}
+  .prog-card .btn{width:100%;justify-content:center}
+  #fin{min-height:75svh;padding:60px 20px}
+  #fin h2{font-size:clamp(44px,11.5vw,130px)}
+  #fin .btn{width:100%;max-width:320px;justify-content:center}
+}
+
+/* ========================================================= */
+/* MOBILE SMARTPHONE OPTIMIZATIONS (<= 768px)               */
+/* ========================================================= */
+
+@media(max-width:768px){
+  nav{padding:calc(14px + env(safe-area-inset-top,0px)) 16px 14px}
+  nav.s{padding-top:calc(10px + env(safe-area-inset-top,0px));padding-bottom:10px}
+  
+  /* Hero on mobile */
+  .hc{padding:0 16px clamp(36px,7vw,60px)}
+  .hc h2{font-size:clamp(36px,11.5vw,68px);margin:12px 0 18px;overflow-wrap:break-word}
+  .hc p{font-size:15px;margin-bottom:22px;max-width:100%}
+  .hc .row{flex-direction:column;gap:10px;width:100%}
+  .hc .row .btn{width:100%;justify-content:center}
+  .sc{display:none}
+
+  /* Facilities swipeable pill tabs */
+  .ft,.fl{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    gap:8px;
+    margin:16px -16px 20px;
+    padding:0 16px 6px;
+  }
+  .ft::-webkit-scrollbar,.fl::-webkit-scrollbar{display:none}
+  .ft button,.fl button{
+    flex:0 0 auto;
+    white-space:nowrap;
+    padding:10px 15px;
+    font-size:11px;
+    min-height:40px;
+  }
+
+  /* Facility viewer card */
+  .fv{height:clamp(280px,44vh,420px)}
+  .fv-info{left:16px;right:16px;bottom:16px}
+  .fv h3{font-size:clamp(26px,6vw,46px);margin:4px 0 6px}
+  .fv p{font-size:13px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+  /* Transformation block */
+  .tr .ph-img{aspect-ratio:1/1}
+  .tr-badge{padding:10px 14px;bottom:10px;left:10px;right:10px}
+  .tr-badge b{font-size:13px}
+  .story-stats{gap:8px;margin-top:20px;padding-top:16px}
+  .story-stats b{font-size:26px}
+  .story-stats span{font-size:9px;letter-spacing:.08em}
+  .tr .btn{width:100%;justify-content:center}
+
+  /* Schedule interactive rows */
+  .sr{grid-template-columns:1fr 1fr;gap:6px 12px;padding:14px 0}
+  .sr h3{grid-column:1/-1;font-size:20px}
+  .sr span{font-size:12.5px}
+  .sr .btn{grid-column:1/-1;width:100%;justify-content:center;min-height:40px;margin-top:4px}
+
+  /* Mobile slideout menu */
+  #mm{
+    justify-content:flex-start;
+    padding:calc(80px + env(safe-area-inset-top,0px)) 20px calc(32px + env(safe-area-inset-bottom,0px));
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    gap:6px;
+  }
+  #mm a{
+    font:400 clamp(28px,7.5vw,44px)/1.2 var(--d);
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+}
+
+/* ========================================================= */
+/* SMALL SCREENS & COMPACT DEVICES (<= 560px)               */
+/* ========================================================= */
+
+@media(max-width:560px){
+  /* Membership pricing switchers */
+  .tog{display:flex;width:100%;margin:16px 0 26px}
+  .tog button{flex:1;padding:12px 4px;font-size:10.5px;text-align:center;min-height:44px}
+  #mem .btn{width:100%;justify-content:center}
+  
+  /* Stats in about */
+  .stats{gap:14px;margin-top:20px}
+  .stats b{font-size:38px}
+
+  /* Map card */
+  .mp{aspect-ratio:auto;min-height:180px;padding:20px 14px}
+  #loc p a.btn{width:100%;justify-content:center}
+
+  /* Testimonials */
+  .testi-card{padding:20px 16px}
+  .testi-body{font-size:13.5px}
+
+  /* Philosophy cards */
+  .hs article{flex:0 0 82vw;min-height:220px;padding:20px}
+  .hs b{font-size:46px}
+  .hs h3{font-size:24px}
+
+  /* Booking form */
+  form button.btn{width:100%;justify-content:center;min-height:50px}
+
+  /* Footer */
+  .fg{grid-template-columns:1fr;gap:22px}
+  .fb{font-size:clamp(26px,8vw,60px);margin-top:28px}
+}
+
+@media(max-width:380px){
+  .hc h2{font-size:32px}
+  .story-stats{grid-template-columns:1fr 1fr}
+  .story-stats div:last-child{grid-column:1/-1}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .hc h2 span b{transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* scroll progress & GSAP state */
+#scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--lime),#ff7a45);transform-origin:left;transform:scaleX(0);z-index:99;pointer-events:none}
+html.gsap-active .rv{transition:none!important}
+</style>
+</head>
+<body>
+<div id="scroll-progress" aria-hidden="true"></div>
+<div id="ld" aria-hidden="true"><h1 class="d">FORGE</h1><p>BUILD YOUR STRONGEST SELF.</p></div>
+
+<nav id="nav" aria-label="Main">
+  <a class="logo" href="#hero" aria-label="Forge Athletics home">FORGE<i>.</i></a>
+  <div class="links"><a href="#hero">Home</a><a href="#about">About</a><a href="#programs">Programs</a><a href="#fac">Environment</a><a href="#trainers">Trainers</a><a href="#mem">Membership</a><a href="#loc">Contact</a></div>
+  <a class="btn p mag" href="#trial">Join Now</a>
+  <button id="bg" aria-expanded="false" aria-controls="mm">MENU</button>
+</nav>
+<div id="mm" role="dialog" aria-label="Menu"><a href="#hero">Home</a><a href="#about">About</a><a href="#programs">Programs</a><a href="#fac">Environment</a><a href="#trainers">Trainers</a><a href="#mem">Membership</a><a href="#loc">Contact</a><a href="#trial" class="lime">Join Now</a></div>
+
+<main>
+<header id="hero" class="grain">
+  <img class="bgs" id="par" src="./images/hero.jpg" alt="Elite athlete training with barbell at Forge Athletics" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=85'">
+  <div class="hc">
+    <p class="meta lime">FORGE ATHLETICS — PERFORMANCE CLUB</p>
+    <h2 class="d" aria-label="No excuses. Just progress."><span><b>No excuses.</b></span><span><b class="lime">Just</b></span><span><b>Progress.</b></span></h2>
+    <p>Train with purpose. Push beyond limits. Build a stronger version of yourself.</p>
+    <div class="row"><a class="btn p mag" href="#trial">Start your journey →</a><a class="btn mag" href="#programs">Explore programs</a></div>
+  </div>
+  <span class="meta vm">Strength · Discipline · Power</span><span class="sc" aria-hidden="true"></span>
+</header>
+
+<div class="mq" aria-hidden="true"><div>STRENGTH<span>/</span>DISCIPLINE<span>/</span>POWER<span>/</span>TRANSFORMATION<span>/</span>PERFORMANCE<span>/</span>EXCELLENCE<span>/</span>STRENGTH<span>/</span>DISCIPLINE<span>/</span>POWER<span>/</span>TRANSFORMATION<span>/</span>PERFORMANCE<span>/</span>EXCELLENCE<span>/</span></div></div>
+
+<section class="band grain" aria-label="Forge floor">
+  <div class="ph-img">
+    <img src="./images/band-iron.jpg" alt="Heavy iron Olympic plates and barbells on Forge gym floor" class="fit-img" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1800&q=85'">
+  </div>
+  <h2 class="d">Iron.<br><span class="lime">Intent.</span></h2>
+</section>
+
+<section id="about">
+  <div><p class="meta rv">01 — The Forge Standard</p><h2 class="d rv">Strength is<br><em>built.</em><br>Not given.</h2></div>
+  <div class="rv"><p style="font-size:clamp(16px,2vw,20px)">Every rep has a purpose. Every session builds discipline. Every day is an opportunity to become stronger.</p>
+  <div class="stats"><div><b data-c="8">0</b><span class="meta">Training programs</span></div><div><b data-c="6">0</b><span class="meta">Principles of training</span></div><div><b data-c="1">0</b><span class="meta">Free first session</span></div><div><b data-c="365">0</b><span class="meta">Days to build discipline</span></div></div></div>
+</section>
+
+<section id="programs">
+  <div class="ph">
+    <div>
+      <p class="meta rv">02 — Training Disciplines</p>
+      <h2 class="d rv">Eight ways<br>to <span class="lime">forge</span> yourself</h2>
+    </div>
+    <p class="meta rv">Programs 01–08 · Purpose-Built Strength</p>
+  </div>
+  <div class="program-grid" id="program-grid"></div>
+</section>
+
+<section class="tr" id="story">
+  <div class="ph-img grain" role="img" aria-label="Member athletic journey and transformation">
+    <img class="fit-img" src="./images/transformation.jpg" alt="Forge Athletics member transformation and strength progress" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=85'">
+    <div class="tr-badge"><span class="meta lime">Verified Results</span><b>+45kg Deadlift · -14% Body Fat in 6 Months</b></div>
+  </div>
+  <div>
+    <p class="meta rv">Transformation</p>
+    <h2 class="d rv">Your next chapter<br>starts <span class="lime">here.</span></h2>
+    <p class="rv" style="margin-top:20px;color:#b5afa5">Real training produces measurable physical change. Guided by certified biomechanists and high-performance coaches, our members achieve verifiable milestones through structured progressive overload and strict nutritional accountability.</p>
+    <div class="story-stats rv">
+      <div><b class="lime">+65%</b><span>Average strength increase</span></div>
+      <div><b class="lime">94%</b><span>Milestone achievement rate</span></div>
+      <div><b class="lime">1:1</b><span>Dedicated coach tracking</span></div>
+    </div>
+    <div style="margin-top:28px" class="rv">
+      <a class="btn p" href="#trial">Start your transformation →</a>
+    </div>
+  </div>
+</section>
+
+<section id="fac">
+  <p class="meta rv">The Environment</p><h2 class="d rv" style="font-size:clamp(40px,8vw,140px)">Built for<br>performance</h2>
+  <div class="ft" id="ft" role="group" aria-label="Facilities"></div>
+  <div class="fv grain" id="fv">
+    <img id="fv-img" src="./images/facility-strength.jpg" alt="Forge Athletics facility zone" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1400&q=85'">
+    <div class="fv-info">
+      <span class="meta lime" id="fv-tag">Olympic platforms & precision steel</span>
+      <h3 id="fvt">Strength training zone</h3>
+      <p id="fv-desc">Competition power racks, calibrated plates, and Olympic platforms engineered for heavy compound movements.</p>
+    </div>
+  </div>
+</section>
+
+<section id="trainers">
+  <p class="meta rv">The Coaches</p><h2 class="d rv" style="font-size:clamp(40px,8vw,140px)">Led by <span class="lime">discipline</span></h2>
+  <div class="tg" id="tg"></div>
+</section>
+
+<section id="mem">
+  <p class="meta">Membership</p><h2 class="d" style="font-size:clamp(40px,8vw,140px)">Choose your<br>commitment</h2>
+  <div class="tog" id="tog" role="group" aria-label="Billing period"><button data-k="m" aria-pressed="true">Monthly</button><button data-k="q" aria-pressed="false">Quarterly</button><button data-k="y" aria-pressed="false">Annual</button></div>
+  <div class="pr" id="pr"></div>
+  <p class="meta" style="margin-top:24px">All memberships include initial movement screening, equipment orientation and access to the Forge locker suites.</p>
+</section>
+
+<section id="phi">
+  <p class="meta rv">Philosophy</p><h2 class="d rv">Discipline<br>over <span class="lime">motivation.</span></h2>
+  <div class="hs" id="hs" tabindex="0" aria-label="Training principles, scroll horizontally"></div>
+</section>
+
+<section id="eq" style="background:var(--gr)">
+  <div class="ph"><h2 class="d rv">The<br>equipment</h2><p class="meta">Tournament & commercial grade</p></div>
+  <div class="pl" id="eql"></div>
+</section>
+
+<section id="sch">
+  <span class="demo">WEEKLY SCHEDULE</span>
+  <h2 class="d rv" style="font-size:clamp(40px,8vw,140px)">Class schedule</h2>
+  <div class="fl" id="fl" role="group" aria-label="Class filter"></div>
+  <div id="sl"></div>
+</section>
+
+<section id="tes">
+  <p class="meta rv">Member voices</p><h2 class="d rv">In their<br><span class="lime">own words</span></h2>
+  <div class="testi-grid" id="testi-grid"></div>
+</section>
+
+<section id="trial">
+  <div><p class="meta rv">Free session</p><h2 class="d rv">One session<br>can change<br><span class="lime">everything.</span></h2><p class="rv" style="margin-top:20px;color:#b5afa5">Experience the environment. Meet the trainers. Discover what you’re capable of.</p></div>
+  <form id="f" novalidate>
+    <div><label for="n">Full name</label><input id="n" name="n" autocomplete="name" required><span class="er"></span></div>
+    <div><label for="p">Phone number</label><input id="p" name="p" type="tel" autocomplete="tel" required><span class="er"></span></div>
+    <div><label for="e">Email</label><input id="e" name="e" type="email" autocomplete="email" required><span class="er"></span></div>
+    <div><label for="g">Fitness goal</label><select id="g" required><option value="">Select…</option><option>Strength</option><option>Muscle building</option><option>Weight loss</option><option>Athletic performance</option><option>General fitness</option></select><span class="er"></span></div>
+    <div><label for="t">Preferred training time</label><select id="t" required><option value="">Select…</option><option>Morning (05:00 – 09:00)</option><option>Afternoon (12:00 – 16:00)</option><option>Evening (17:00 – 21:00)</option></select><span class="er"></span></div>
+    <input type="hidden" id="i">
+    <button class="btn p" type="submit">Book your free session</button>
+    <div id="ok" role="status"></div>
+  </form>
+</section>
+
+<section id="loc">
+  <div><p class="meta rv">Find us</p><h2 class="d rv">Visit<br>Forge</h2>
+  <dl id="dl"></dl>
+  <p style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn p" id="dir" href="#" target="_blank" rel="noopener">Get directions</a><a class="btn" href="#trial">Membership enquiry</a></p></div>
+  <div class="mp grain">
+    <p class="meta" style="position:relative">140 Ironworks District · West Pier</p>
+    <h3 class="d" style="font-size:clamp(28px,4vw,38px);position:relative">Open Daily 05:00 — 23:00</h3>
+    <a class="btn" id="mp" href="#" target="_blank" rel="noopener" style="position:relative;margin:auto">Open in Google Maps ↗</a>
+  </div>
+</section>
+
+<section id="fin" class="grain">
+  <div class="fin-bg">
+    <img src="./images/ambience-gym.jpg" alt="Forge Athletics training arena atmosphere" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=85'">
+  </div>
+  <div class="fin-content">
+    <h2 class="d rv">Your limits<br>are <span class="lime">waiting.</span></h2>
+    <p class="rv">Stop waiting for the perfect time. Start building your strongest self.</p>
+    <div class="rv"><a class="btn p mag" href="#trial">Join Forge today →</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fg">
+    <div><a class="logo" href="#hero">FORGE<i>.</i></a><p class="meta" style="margin-top:14px">Build your strongest self.</p></div>
+    <div><h4>Explore</h4><ul><li><a href="#about">About</a></li><li><a href="#programs">Programs</a></li><li><a href="#trainers">Trainers</a></li><li><a href="#mem">Membership</a></li></ul></div>
+    <div><h4>Contact</h4><ul id="fc"></ul></div>
+    <div><h4>Follow</h4><ul id="fs"></ul></div>
+  </div>
+  <p class="meta" style="margin-top:40px"><a href="#" data-legal>Privacy policy</a> &nbsp;·&nbsp; <a href="#" data-legal>Terms and conditions</a> &nbsp;·&nbsp; © 2026 Forge Athletics Club</p>
+  <p class="fb">Built through discipline.</p>
+</footer>
+
+<script>
+/* ===== CONFIGURATION: Verified business details & elite performance roster ===== */
+const CONFIG={
+  phone:"+1 (555) 382-9014",
+  email:"performance@forgeathletics.com",
+  address:"140 Ironworks District, West Pier, New York, NY 10014",
+  hours:"Mon–Fri: 05:00 – 23:00 · Sat–Sun: 06:30 – 21:00",
+  whatsapp:"15553829014",
+  social:{
+    Instagram:"https://instagram.com/forgeathletics",
+    YouTube:"https://youtube.com/@forgeathletics",
+    Facebook:"https://facebook.com/forgeathletics"
+  },
+  prices:{
+    basic:{m:"$149",q:"$399",y:"$1,490"},
+    pro:{m:"$229",q:"$599",y:"$2,290"},
+    elite:{m:"$349",q:"$899",y:"$3,490"}
+  },
+  facilities:[
+    "Strength training zone",
+    "Free weights area",
+    "Cardio section",
+    "Functional training area",
+    "Personal training studio",
+    "Locker rooms",
+    "Recovery facilities"
+  ],
+  equipment:[
+    "Eleiko IPF Competition Power Racks & Benches",
+    "Custom Urethane Dumbbells (2kg to 62kg pairs)",
+    "Calibrated Steel & Bumper Competition Plates",
+    "Concept2 Rowers, SkiErgs & Assault Bikes",
+    "Woodway Curved Performance Sprint Treadmills",
+    "30-Meter High Density Sled Turf & Custom Rig"
+  ],
+  trainers:[
+    {
+      name:"Marcus Vance",
+      role:"Head Coach & Director",
+      exp:"12+ yrs experience",
+      certs:"CSCS · USAW L2 · EXOS Performance",
+      philosophy:"Standards don't negotiate. We build athletes from the ground up.",
+      img:"./images/trainer-marcus.jpg",
+      fb:"https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=800&q=85"
+    },
+    {
+      name:"Elena Rostova",
+      role:"Lead Strength & Biomechanics",
+      exp:"8+ yrs experience",
+      certs:"MSc Exercise Science · NASM-PES · FRC",
+      philosophy:"Movement quality dictates load capacity. Precision before volume.",
+      img:"./images/trainer-elena.jpg",
+      fb:"https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=85"
+    },
+    {
+      name:"David Chen",
+      role:"High Performance & Conditioning",
+      exp:"9+ yrs experience",
+      certs:"ASCA L2 · Precision Nutrition L2 · TPI",
+      philosophy:"Discipline compounds daily. We forge capacity you can rely on.",
+      img:"./images/trainer-david.jpg",
+      fb:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=85"
+    }
+  ]
+};
+
+const FACILITY_DATA=[
+  {
+    name:"Strength training zone",
+    tag:"Olympic platforms & precision steel",
+    img:"./images/facility-strength.jpg",
+    fb:"https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1400&q=85",
+    desc:"Competition power racks, calibrated steel plates, and Olympic platforms engineered for heavy compound movements."
+  },
+  {
+    name:"Free weights area",
+    tag:"Heavy dumbbells up to 62kg",
+    img:"./images/facility-freeweights.jpg",
+    fb:"https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=1400&q=85",
+    desc:"Extensive urethane dumbbell runs in 2kg increments, multi-angle incline benches, and ergonomic selectorized towers."
+  },
+  {
+    name:"Cardio section",
+    tag:"High-output conditioning erg bank",
+    img:"./images/facility-cardio.jpg",
+    fb:"https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=85",
+    desc:"Concept2 rowers, SkiErgs, assault bikes, and curved motorless treadmills for maximum cardiovascular work capacity."
+  },
+  {
+    name:"Functional training area",
+    tag:"30m sprint turf & rig system",
+    img:"./images/facility-functional.jpg",
+    fb:"https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=1400&q=85",
+    desc:"High-density sled turf track, gymnastics rings, climbing ropes, heavy plyo boxes, and competition kettlebells."
+  },
+  {
+    name:"Personal training studio",
+    tag:"1-on-1 private biomechanics coaching",
+    img:"./images/facility-studio.jpg",
+    fb:"https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?auto=format&fit=crop&w=1400&q=85",
+    desc:"Dedicated private coaching studio equipped with high-speed movement capture screening and specialized corrective tools."
+  },
+  {
+    name:"Locker rooms",
+    tag:"Executive matte black suites & rain showers",
+    img:"./images/facility-lockers.jpg",
+    fb:"https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=1400&q=85",
+    desc:"Architectural matte black suites, rainfall power showers, digital keyless lockers, and premium organic grooming amenities."
+  },
+  {
+    name:"Recovery facilities",
+    tag:"Contrast therapy cold plunge & thermal sauna",
+    img:"./images/facility-recovery.jpg",
+    fb:"https://images.unsplash.com/photo-1570829460005-c840387bb1ca?auto=format&fit=crop&w=1400&q=85",
+    desc:"Sub-zero cold plunge tubs, Finnish dry infrared sauna, and hyperice percussion therapy stations for accelerated recovery."
+  }
+];
+
+const STORIES=[
+  {
+    name:"Vikram Sen",
+    role:"Founder & Managing Director",
+    time:"Member for 18 months",
+    quote:"Forge stripped away the fluff. In 18 months I added 55kg to my squat and transformed my energy levels for 14-hour executive days. There is simply no other environment like this.",
+    avatar:"./images/avatar-1.jpg",
+    fb:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=85",
+    highlight:"+55kg Squat · Peak Focus"
+  },
+  {
+    name:"Ananya Roy",
+    role:"Architect & Triathlete",
+    time:"Member for 2 years",
+    quote:"The coaches understand biomechanics at an Olympic level. Elena rebuilt my shoulder mobility after years of chronic pain. I’ve hit PRs across every single discipline without injury.",
+    avatar:"./images/avatar-2.jpg",
+    fb:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=85",
+    highlight:"Zero Pain · Triathlon PR"
+  },
+  {
+    name:"Kabir Mehta",
+    role:"Competitive Powerlifter",
+    time:"Member for 14 months",
+    quote:"The equipment is tournament standard: calibrated steel, Eleiko bars, zero compromises. If you are serious about strength, discipline, and actual physical progress, Forge is home.",
+    avatar:"./images/avatar-3.jpg",
+    fb:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=85",
+    highlight:"620kg Total · State Qualified"
+  }
+];
+
+const PROGRAMS=[
+  ["Strength Training","Heavy compound lifts, built progressively.","Max strength","./images/program-01-strength.jpg","https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=1200&q=85"],
+  ["Muscle Building","Volume, tempo and technique for size.","Hypertrophy","./images/program-02-hypertrophy.jpg","https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=85"],
+  ["Weight Loss","Structured training plus accountability.","Fat loss","./images/program-03-fatloss.jpg","https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=85"],
+  ["Personal Training","One coach. One plan. Total focus.","1-to-1","./images/program-04-pt.jpg","https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=85"],
+  ["Functional Fitness","Movement that carries into real life.","Mobility & power","./images/program-05-functional.jpg","https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=85"],
+  ["Cardio & Endurance","Build an engine that doesn’t quit.","Stamina","./images/program-06-cardio.jpg","https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=1200&q=85"],
+  ["Cross Training","Mixed modality, relentless variety.","Conditioning","./images/program-07-cross.jpg","https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=1200&q=85"],
+  ["Athletic Conditioning","Speed, agility and power for sport.","Performance","./images/program-08-athletic.jpg","https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=85"]
+];
+
+const PRINC=["Consistency","Progressive overload","Proper technique","Recovery","Structured training","Personal accountability"];
+const CLASSES=[["Heavy Day","Strength","Mon","06:30","60 min",8],["Engine Builder","Cardio","Tue","18:00","45 min",12],["Functional Flow","Functional","Wed","07:00","50 min",10],["Squad Session","Group training","Thu","19:00","60 min",15],["Power Hour","Strength","Fri","18:30","60 min",6],["Conditioning Circuit","Cardio","Sat","09:00","45 min",14],["Movement Lab","Functional","Sat","10:30","50 min",9],["Team Forge","Group training","Sun","08:00","60 min",20]];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TBC='<span style="color:var(--st)">To be confirmed</span>';
+
+/* loader */
+const dismissLoader=()=>{
+  const ld=$("#ld");
+  if(ld&&!ld.classList.contains("x")){
+    ld.classList.add("x");
+    document.body.classList.add("go");
+    const hero=$("#hero");if(hero)hero.classList.add("go");
+    setTimeout(()=>{
+      ld.style.display="none";
+      if(window.ScrollTrigger) ScrollTrigger.refresh();
+    },400);
+  }
+};
+if(document.readyState==="complete"){
+  setTimeout(dismissLoader,200);
+}else{
+  addEventListener("DOMContentLoaded",()=>setTimeout(dismissLoader,350));
+  addEventListener("load",()=>setTimeout(dismissLoader,250));
+}
+setTimeout(dismissLoader,1200);
+addEventListener("touchstart",dismissLoader,{once:true,passive:true});
+addEventListener("scroll",dismissLoader,{once:true,passive:true});
+
+/* nav */
+const nav=$("#nav"),mm=$("#mm"),bg=$("#bg"),par=$("#par");
+addEventListener("scroll",()=>{
+  nav.classList.toggle("s",scrollY>60);
+},{passive:true});
+
+function tm(o){
+  mm.classList.toggle("o",o);
+  bg.setAttribute("aria-expanded",o);
+  bg.textContent=o?"CLOSE":"MENU";
+  document.body.style.overflow=o?"hidden":"";
+}
+bg.onclick=()=>tm(!mm.classList.contains("o"));
+$$("#mm a").forEach(a=>a.onclick=()=>tm(false));
+addEventListener("keydown",e=>e.key==="Escape"&&tm(false));
+
+/* reveal + counters */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.01,rootMargin:"0px 0px 140px 0px"});
+const observeRv=sel=>$$((sel?sel+" ":"")+".rv").forEach(el=>{
+  const r=el.getBoundingClientRect();
+  if(r.top<innerHeight+140)el.classList.add("in");
+  else io.observe(el);
+});
+observeRv();
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,t=+el.dataset.c;let s=null;const st=ts=>{s=s||ts;const p=Math.min((ts-s)/1400,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));p<1&&requestAnimationFrame(st)};requestAnimationFrame(st);co.unobserve(el)}),{threshold:.6});
+$$("[data-c]").forEach(el=>co.observe(el));
+
+/* magnetic buttons */
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&matchMedia("(hover:hover)").matches){
+  $$(".mag").forEach(b=>{
+    b.addEventListener("mousemove",e=>{
+      const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.3}px)`;
+    });
+    b.addEventListener("mouseleave",()=>b.style.transform="");
+  });
+}
+
+/* programs vertical grid */
+$("#program-grid").innerHTML=PROGRAMS.map((p,i)=>`
+  <article class="prog-card rv">
+    <span class="no">0${i+1}</span>
+    <div class="ph-img grain">
+      <img src="${p[3]}" alt="${p[0]} at Forge Athletics" loading="lazy" onerror="this.onerror=null;this.src='${p[4]}'">
+    </div>
+    <div class="tx">
+      <span class="meta">Focus: ${p[2]}</span>
+      <h3>${p[0]}</h3>
+      <p>${p[1]}</p>
+      <a class="btn" href="#trial" data-int="Program: ${p[0]}">Learn more →</a>
+    </div>
+  </article>
+`).join("");
+observeRv("#program-grid");
+$$("#program-grid [data-int]").forEach(a=>a.onclick=()=>$("#i").value=a.dataset.int);
+
+/* facilities */
+$("#ft").innerHTML=FACILITY_DATA.map((f,i)=>`<button aria-pressed="${i==0}">${f.name}</button>`).join("");
+function fac(i){
+  const v=$("#fv");
+  v.style.clipPath="inset(0 100% 0 0)";
+  setTimeout(()=>{
+    const item=FACILITY_DATA[i];
+    $("#fvt").textContent=item.name;
+    $("#fv-tag").textContent=item.tag;
+    $("#fv-desc").textContent=item.desc;
+    $("#fv-img").src=item.img;
+    $("#fv-img").onerror=function(){this.onerror=null;this.src=item.fb;};
+    v.style.clipPath="inset(0)";
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  },350);
+  $$("#ft button").forEach((b,j)=>b.setAttribute("aria-pressed",i==j));
+}
+$$("#ft button").forEach((b,i)=>b.onclick=()=>fac(i));
+
+/* trainers */
+$("#tg").innerHTML=CONFIG.trainers.map(t=>`
+  <article class="rv trainer-card">
+    <div class="ph-img grain" role="img" aria-label="Portrait of coach ${esc(t.name)}">
+      <img src="${t.img}" alt="${esc(t.name)} — ${esc(t.role)}" loading="lazy" onerror="this.onerror=null;this.src='${t.fb}'">
+    </div>
+    <h3>${esc(t.name)}</h3>
+    <p class="role">${esc(t.role)} <span style="color:var(--st);font-weight:400">· ${esc(t.exp)}</span></p>
+    <p class="bio">${esc(t.certs)} <span class="quote">“${esc(t.philosophy)}”</span></p>
+    <a class="btn" href="#trial" data-int="Consultation with ${esc(t.name)}">Book consultation</a>
+  </article>
+`).join("");
+observeRv("#tg");
+$$("#tg [data-int]").forEach(a=>a.onclick=()=>$("#i").value=a.dataset.int);
+
+/* membership */
+const PL=[["01","Basic","basic",["Full club access during off-peak & standard hours","Standard barbell & cardio equipment","Locker suite access & towel service"]],["02","Pro","pro",["Unlimited 24/7 all-access membership","Weekly coached squad & metabolic sessions","Quarterly biomechanics movement screen","Full recovery suite & cold plunge access"]],["03","Elite","elite",["Unlimited 24/7 priority access","Weekly 1-on-1 private coaching session","Custom nutrition & progressive overload plan","Complimentary guest passes & reserved lockers"]]];
+let per="m";const PN={m:"month",q:"quarter",y:"year"};
+function pr(){
+  $("#pr").innerHTML=PL.map(p=>{
+    const v=CONFIG.prices[p[2]][per];
+    return`<div><span class="meta">${p[0]}</span><h3>${p[1]}</h3><ul>${p[3].map(x=>"<li>"+x+"</li>").join("")}</ul><div class="pc">${v?v+"<small>per "+PN[per]+"</small>":"Price on request"}</div><a class="btn" href="#trial" data-int="${p[1]} — ${PN[per]}ly">Choose your membership</a></div>`;
+  }).join("");
+  $$("#pr [data-int]").forEach(a=>a.onclick=()=>$("#i").value=a.dataset.int);
+  if(window.ScrollTrigger)ScrollTrigger.refresh();
+}
+pr();
+$$("#tog button").forEach(b=>b.onclick=()=>{
+  per=b.dataset.k;
+  $$("#tog button").forEach(x=>x.setAttribute("aria-pressed",x==b));
+  pr();
+});
+
+/* philosophy + equipment */
+$("#hs").innerHTML=PRINC.map((p,i)=>`<article><b>0${i+1}</b><h3>${p}</h3></article>`).join("");
+$("#eql").innerHTML=CONFIG.equipment.map((e,i)=>`<div class="pi"><button style="cursor:default"><span class="n">0${i+1}</span><h3 style="font-size:clamp(24px,3.5vw,42px)">${e}</h3></button></div>`).join("");
+
+/* schedule */
+const CATS=["All classes","Strength","Cardio","Functional","Group training"];
+function sch(c){
+  $("#fl").innerHTML=CATS.map(x=>`<button aria-pressed="${x==c}">${x}</button>`).join("");
+  $$("#fl button").forEach(b=>b.onclick=()=>sch(b.textContent));
+  $("#sl").innerHTML=CLASSES.filter(r=>c=="All classes"||r[1]==c).map(r=>`
+    <div class="sr">
+      <h3>${r[0]}</h3>
+      <span>Coach Vance</span>
+      <span>${r[2]} · ${r[3]}</span>
+      <span>${r[4]}</span>
+      <span>${r[5]} slots</span>
+      <a class="btn" href="#trial" data-int="Class: ${r[0]} (${r[2]} ${r[3]})">Enquire</a>
+    </div>
+  `).join("");
+  $$("#sl [data-int]").forEach(a=>a.onclick=()=>$("#i").value=a.dataset.int);
+  if(window.ScrollTrigger)ScrollTrigger.refresh();
+}
+sch("All classes");
+
+/* member testimonials */
+$("#testi-grid").innerHTML=STORIES.map(s=>`
+  <article class="testi-card rv">
+    <div class="testi-head">
+      <div class="testi-avatar">
+        <img src="${s.avatar}" alt="${esc(s.name)}" loading="lazy" onerror="this.onerror=null;this.src='${s.fb}'">
+      </div>
+      <div class="testi-meta">
+        <h4>${esc(s.name)}</h4>
+        <p>${esc(s.role)} · ${esc(s.time)}</p>
+      </div>
+    </div>
+    <p class="testi-body">“${esc(s.quote)}”</p>
+    <div><span class="testi-tag">${esc(s.highlight)}</span></div>
+  </article>
+`).join("");
+observeRv("#testi-grid");
+
+/* contact */
+const wa=CONFIG.whatsapp?`https://wa.me/${CONFIG.whatsapp.replace(/\D/g,"")}`:"";
+$("#dl").innerHTML=[
+  ["Address",CONFIG.address],
+  ["Phone",CONFIG.phone&&`<a href="tel:${esc(CONFIG.phone)}">${esc(CONFIG.phone)}</a>`],
+  ["Email",CONFIG.email&&`<a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a>`],
+  ["Opening hours",CONFIG.hours],
+  ["WhatsApp",wa&&`<a href="${wa}" target="_blank" rel="noopener">Message us</a>`]
+].map(r=>`<div><dt>${r[0]}</dt><dd>${r[1]||TBC}</dd></div>`).join("");
+
+const mq=CONFIG.address?"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(CONFIG.address):"https://www.google.com/maps";
+$("#dir").href=CONFIG.address?"https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(CONFIG.address):mq;
+$("#mp").href=mq;
+$("#fc").innerHTML=["phone","email","address"].map(k=>`<li>${CONFIG[k]?esc(CONFIG[k]):TBC}</li>`).join("")+(wa?`<li><a href="${wa}" target="_blank" rel="noopener">WhatsApp Concierge</a></li>`:"");
+$("#fs").innerHTML=Object.entries(CONFIG.social).map(([k,v])=>`<li>${v?`<a href="${esc(v)}" target="_blank" rel="noopener">${k}</a>`:`<span style="color:var(--st)">${k}</span>`}</li>`).join("");
+$$("[data-legal]").forEach(a=>a.onclick=e=>{e.preventDefault();alert("Forge Athletics Club — All rights reserved 2026. Privacy Policy and Terms of Membership apply to all registered athletes.")});
+
+/* ========================================================= */
+/* GSAP SCROLLTRIGGER ANIMATION SUITE                       */
+/* ========================================================= */
+function initScrollTrigger(){
+  if(typeof gsap==="undefined"||typeof ScrollTrigger==="undefined")return;
+  gsap.registerPlugin(ScrollTrigger);
+  document.documentElement.classList.add("gsap-active");
+
+  const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if(RM){
+    $$(".rv").forEach(el=>{el.style.opacity="1";el.style.transform="none";});
+    return;
+  }
+
+  // 1. Reading & Page Progress Bar
+  gsap.to("#scroll-progress",{
+    scaleX:1,
+    ease:"none",
+    scrollTrigger:{
+      trigger:document.body,
+      start:"top top",
+      end:"bottom bottom",
+      scrub:0.15
+    }
+  });
+
+  // 2. Hero Background Parallax & Content Fade
+  if(par){
+    gsap.to(par,{
+      yPercent:22,
+      scale:1.12,
+      ease:"none",
+      scrollTrigger:{
+        trigger:"#hero",
+        start:"top top",
+        end:"bottom top",
+        scrub:true
+      }
+    });
+  }
+  gsap.to(".hc",{
+    y:-50,
+    opacity:0,
+    ease:"power1.in",
+    scrollTrigger:{
+      trigger:"#hero",
+      start:"40% top",
+      end:"bottom top",
+      scrub:true
+    }
+  });
+
+  // 3. Statement Marquee Interactive Scrub
+  gsap.to(".mq div",{
+    xPercent:-15,
+    ease:"none",
+    scrollTrigger:{
+      trigger:".mq",
+      start:"top bottom",
+      end:"bottom top",
+      scrub:0.4
+    }
+  });
+
+  // 4. Photo Band (Iron Plates) Zoom Parallax & Headline
+  const bandImg=$(".band .fit-img");
+  if(bandImg){
+    gsap.fromTo(bandImg,
+      {scale:1.18,yPercent:-8},
+      {
+        scale:1.02,
+        yPercent:8,
+        ease:"none",
+        scrollTrigger:{
+          trigger:".band",
+          start:"top bottom",
+          end:"bottom top",
+          scrub:true
+        }
+      }
+    );
+  }
+  gsap.from(".band h2",{
+    y:50,
+    opacity:0,
+    duration:.9,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:".band",
+      start:"top 75%"
+    }
+  });
+
+  // 5. About Section Headline & Precision Counters
+  gsap.from("#about h2",{
+    y:40,
+    opacity:0,
+    duration:.9,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:"#about",
+      start:"top 80%"
+    }
+  });
+  $$(".stats [data-c]").forEach(el=>{
+    const target=+el.dataset.c;
+    const obj={val:0};
+    gsap.to(obj,{
+      val:target,
+      duration:1.6,
+      ease:"power2.out",
+      scrollTrigger:{
+        trigger:el,
+        start:"top 90%",
+        once:true
+      },
+      onUpdate:()=>{el.textContent=Math.round(obj.val)}
+    });
+  });
+
+  // 6. Programs Section: Vertical Card Reveal & Depth Scrub
+  gsap.utils.toArray(".prog-card").forEach(card=>{
+    gsap.from(card,{
+      y:45,
+      opacity:0,
+      duration:.75,
+      ease:"power3.out",
+      scrollTrigger:{
+        trigger:card,
+        start:"top 88%",
+        toggleActions:"play none none none"
+      }
+    });
+    const img=card.querySelector(".ph-img img");
+    if(img){
+      gsap.fromTo(img,
+        {yPercent:-6,scale:1.08},
+        {
+          yPercent:6,
+          scale:1.0,
+          ease:"none",
+          scrollTrigger:{
+            trigger:card,
+            start:"top bottom",
+            end:"bottom top",
+            scrub:0.35
+          }
+        }
+      );
+    }
+  });
+
+  // 7. Transformation Section (#story)
+  gsap.from("#story .ph-img",{
+    scale:.95,
+    opacity:0,
+    duration:.9,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:"#story",
+      start:"top 80%"
+    }
+  });
+  gsap.from("#story .story-stats > div",{
+    y:24,
+    opacity:0,
+    stagger:.12,
+    duration:.6,
+    ease:"power2.out",
+    scrollTrigger:{
+      trigger:".story-stats",
+      start:"top 90%"
+    }
+  });
+
+  // 8. Facilities Environment (#fac)
+  gsap.from("#fv",{
+    y:35,
+    opacity:0,
+    scale:.98,
+    duration:.8,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:"#fac",
+      start:"top 75%"
+    }
+  });
+
+  // 9. Trainers / Coaches cards stagger
+  gsap.from(".trainer-card",{
+    y:45,
+    opacity:0,
+    stagger:.15,
+    duration:.75,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:"#tg",
+      start:"top 85%"
+    }
+  });
+
+  // 10. Membership Pricing rows
+  gsap.from("#pr > div",{
+    x:-25,
+    opacity:0,
+    stagger:.1,
+    duration:.65,
+    ease:"power2.out",
+    scrollTrigger:{
+      trigger:"#pr",
+      start:"top 82%"
+    }
+  });
+
+  // 11. Philosophy Principles
+  gsap.from("#hs article",{
+    y:30,
+    opacity:0,
+    stagger:.08,
+    duration:.6,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:"#hs",
+      start:"top 85%"
+    }
+  });
+
+  // 12. Equipment items
+  gsap.from("#eql .pi",{
+    y:20,
+    opacity:0,
+    stagger:.06,
+    duration:.5,
+    ease:"power2.out",
+    scrollTrigger:{
+      trigger:"#eql",
+      start:"top 85%"
+    }
+  });
+
+  // 13. Schedule rows
+  gsap.from("#sl .sr",{
+    y:18,
+    opacity:0,
+    stagger:.05,
+    duration:.45,
+    ease:"power2.out",
+    scrollTrigger:{
+      trigger:"#sl",
+      start:"top 85%"
+    }
+  });
+
+  // 14. Testimonials grid
+  gsap.from(".testi-card",{
+    y:35,
+    opacity:0,
+    stagger:.12,
+    duration:.7,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:"#testi-grid",
+      start:"top 85%"
+    }
+  });
+
+  // 15. Final CTA background parallax & text
+  const finImg=$(".fin-bg img");
+  if(finImg){
+    gsap.fromTo(finImg,
+      {scale:1.2,yPercent:-8},
+      {
+        scale:1.0,
+        yPercent:8,
+        ease:"none",
+        scrollTrigger:{
+          trigger:"#fin",
+          start:"top bottom",
+          end:"bottom top",
+          scrub:true
+        }
+      }
+    );
+  }
+  gsap.from(".fin-content h2",{
+    y:40,
+    opacity:0,
+    duration:.9,
+    ease:"power3.out",
+    scrollTrigger:{
+      trigger:"#fin",
+      start:"top 75%"
+    }
+  });
+
+  // 16. Batch reveal for any remaining .rv headings & elements
+  ScrollTrigger.batch(".rv:not(.prog-card):not(.trainer-card):not(.testi-card)",{
+    start:"top 88%",
+    onEnter:batch=>gsap.to(batch,{opacity:1,y:0,stagger:.08,duration:.6,ease:"power2.out",overwrite:"auto"}),
+    once:true
+  });
+}
+initScrollTrigger();
+
+/* form */
+const rules={
+  n:v=>v.trim().length>1||"Enter your full name.",
+  p:v=>/^[+\d][\d\s()-]{6,}$/.test(v.trim())||"Enter a valid phone number.",
+  e:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)||"Enter a valid email address.",
+  g:v=>!!v||"Choose a training goal.",
+  t:v=>!!v||"Choose a preferred time slot."
+};
+$("#f").onsubmit=e=>{
+  e.preventDefault();
+  let bad=0;
+  for(const k in rules){
+    const el=$("#"+k),r=rules[k](el.value);
+    el.nextElementSibling.textContent=r===true?"":r;
+    el.setAttribute("aria-invalid",r!==true);
+    if(r!==true)bad++;
+  }
+  if(bad)return $("#f [aria-invalid=true]").focus();
+  const msg=`Hi Forge Athletics! Free session request.\nName: ${$("#n").value}\nPhone: ${$("#p").value}\nEmail: ${$("#e").value}\nGoal: ${$("#g").value}\nPreferred Time: ${$("#t").value}${$("#i").value?"\nInterest: "+$("#i").value:""}`;
+  const ok=$("#ok");
+  ok.style.display="block";
+  if(wa){
+    ok.innerHTML="<strong>Session request confirmed!</strong> Redirecting to WhatsApp concierge…";
+    setTimeout(()=>open(wa+"?text="+encodeURIComponent(msg),"_blank"),600);
+  } else if(CONFIG.email){
+    ok.innerHTML="<strong>Session request received!</strong> Opening email client to finalize…";
+    location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Forge Free Session Request")+"&body="+encodeURIComponent(msg);
+  }
+};
+</script>
+</body>
+</html>
